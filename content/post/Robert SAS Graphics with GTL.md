@@ -5,7 +5,7 @@ tags:
 - SAS
 - Visualization
 thumbnailImagePosition: left
-thumbnailImage: //https://www.sas.com/content/sascom/en_us/software/platform/open/_jcr_content/par/styledcontainer_795c/par/image_8ae1.img.jpg/1500986649992.jpg
+thumbnailImage: //www.sas.com/content/sascom/en_us/software/platform/open/_jcr_content/par/styledcontainer_795c/par/image_8ae1.img.jpg/1500986649992.jpg
 ---
 
 This post is copy from Robert Allison's blog, there are 18 wonderful SAS plot ...
@@ -15,8 +15,8 @@ This post is copy from Robert Allison's blog, there are 18 wonderful SAS plot ..
 
 
 
-Robert Allison's Wonderful SAS Graphics with GTL
-===============================
+#Robert Allison's Wonderful SAS Graphics with GTL
+
 Almost all below are moved from **Robert Allison's blog**. That's great wonderful graphics  and I want to arrange the figures & codes together for my better self-learning. (This is typed by SHAN).
 [Robert Allison's Original Blog](http://blogs.sas.com/content/sastraining/2016/12/20/graphs-comparing-r-excel-tableau-spss-matlab-js-python-and-sas/)
 
@@ -1103,7 +1103,7 @@ ODS LISTING;
 Back to [Index](#index)
 
 ##Chart9 Curves
-![](/img/Robert SAS Graphics/cruves.png)
+![](/img/Robert SAS Graphics/curves.png)
 
 ```sas
 %let name=curves;
