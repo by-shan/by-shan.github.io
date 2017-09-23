@@ -16,7 +16,7 @@ Welcom to Boyao SHAN's Blog.
 <!--more-->
 
 ![Tranquilpeak](/img/showcase.png)
-<!-- toc -->
+
 
 #Welcome!
 

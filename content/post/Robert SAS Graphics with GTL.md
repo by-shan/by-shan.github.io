@@ -11,8 +11,6 @@ thumbnailImage: //www.sas.com/content/sascom/en_us/software/platform/open/_jcr_c
 This post is copy from Robert Allison's blog, there are 18 wonderful SAS plot ...
 <!--more-->
 
-<!-- toc -->
-
 
 
 #Robert Allison's Wonderful SAS Graphics with GTL
