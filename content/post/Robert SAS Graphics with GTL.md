@@ -1,11 +1,13 @@
 ---
 title: "Robert Allison's Wonderful SAS Graphics with GTL"
 date: 2017-09-23
+categories:
 tags:
 - SAS
 - Visualization
 thumbnailImagePosition: left
-thumbnailImage: //www.sas.com/content/sascom/en_us/software/platform/open/_jcr_content/par/styledcontainer_795c/par/image_8ae1.img.jpg/1500986649992.jpg
+thumbnailImage://www.sas.com/content/sascom/en_us/software/platform/open/_jcr_content/par/styledcontainer_795c/par/image_8ae1.img.jpg/1500986649992.jpg
+
 ---
 
 This post is copy from Robert Allison's blog, there are 18 wonderful SAS plot ...
@@ -4166,5 +4168,3 @@ ODS HTML CLOSE;
 ODS LISTING;
 ```
 Back to [Index](#index)
-
-<end>
