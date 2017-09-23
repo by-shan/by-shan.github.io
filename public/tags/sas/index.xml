@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sas on Boyao SHAN</title>
+    <link>https://by-shan.github.io/tags/sas/</link>
+    <description>Recent content in Sas on Boyao SHAN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://by-shan.github.io/tags/sas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Robert Allison&#39;s Wonderful SAS Graphics with GTL</title>
+      <link>https://by-shan.github.io/2017/09/robert-allisons-wonderful-sas-graphics-with-gtl/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://by-shan.github.io/2017/09/robert-allisons-wonderful-sas-graphics-with-gtl/</guid>
+      <description>&lt;p&gt;This post is copy from Robert Allison&amp;rsquo;s blog, there are 18 wonderful SAS plot &amp;hellip;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
