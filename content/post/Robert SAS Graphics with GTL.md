@@ -15,12 +15,11 @@ This post is copy from Robert Allison's blog, there are 18 wonderful SAS plot ..
 
 
 
-#Robert Allison's Wonderful SAS Graphics with GTL
 
 Almost all below are moved from **Robert Allison's blog**. That's great wonderful graphics  and I want to arrange the figures & codes together for my better self-learning. (This is typed by SHAN).
 [Robert Allison's Original Blog](http://blogs.sas.com/content/sastraining/2016/12/20/graphs-comparing-r-excel-tableau-spss-matlab-js-python-and-sas/)
 
-##Index
+## Index
 -       [Chart1 Likert chart of survey responses](#chart1 likert chart of survey responses)
 -       [Chart2 Reading Survery Responses](#chart2 reading Survery Responses) 
 -       [Chart3 Crime Rate Matrix](#chart3 crime rate matrix)
@@ -41,7 +40,7 @@ Almost all below are moved from **Robert Allison's blog**. That's great wonderfu
 -       [Chart18 Catalyst Experiment](#Chart18 Catalyst Experiment)
 
 
-##Chart1 Likert chart of survey responses
+## Chart1 Likert chart of survey responses
 ![](/img/Robert SAS Graphics/likert.png)
 
 ```sas
@@ -180,7 +179,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart2 Reading Survery Responses
+## Chart2 Reading Survery Responses
 ![](/img/Robert SAS Graphics/book_survey.png)
 
 ```sas
@@ -382,7 +381,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart3 Crime Rate Matrix
+## Chart3 Crime Rate Matrix
 ![](/img/Robert SAS Graphics/crime_rate.png)
 
 ```sas
@@ -475,7 +474,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart4 Series Line Plot
+## Chart4 Series Line Plot
 ![](/img/Robert SAS Graphics/recession_job_losses.png)
 
 ```sas
@@ -668,7 +667,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart5 Grouped Bar Charts
+## Chart5 Grouped Bar Charts
 ![](/img/Robert SAS Graphics/cola.png)
 
 ```sas
@@ -801,7 +800,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart6 3D Plot
+## Chart6 3D Plot
 ![](/img/Robert SAS Graphics/points_lines_3d.png)
 
 ```sas
@@ -968,7 +967,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart7 World Map
+## Chart7 World Map
 ![](/img/Robert SAS Graphics/earth_at_night.png)
 
 ```sas
@@ -1040,7 +1039,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart8 Scatter Plot
+## Chart8 Scatter Plot
 ![](/img/Robert SAS Graphics/scatter.png)
 
 ```sas
@@ -1102,7 +1101,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart9 Curves
+## Chart9 Curves
 ![](/img/Robert SAS Graphics/curves.png)
 
 ```sas
@@ -1218,7 +1217,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart10 Nonindependent Random Normal Variables
+## Chart10 Nonindependent Random Normal Variables
 ![](/img/Robert SAS Graphics/random_scatter.png)
 
 ```sas
@@ -1275,7 +1274,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart11 Iris - Grouped Scatter Plot
+## Chart11 Iris - Grouped Scatter Plot
 ![](/img/Robert SAS Graphics/iris_flower.png)
 
 ```sas
@@ -1390,7 +1389,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart12 Mosquitos in Map
+## Chart12 Mosquitos in Map
 ![](/img/Robert SAS Graphics/west_nile_chicago.png)
 
 ```sas
@@ -1504,7 +1503,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart13 Earth in Map
+## Chart13 Earth in Map
 ![](/img/Robert SAS Graphics/worldquakes_recent.png)
 
 ```sas
@@ -1744,7 +1743,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart14 Cancer Intervention Research
+## Chart14 Cancer Intervention Research
 ![](/img/Robert SAS Graphics/cancer_intervention_cap.png)
 
 ```sas
@@ -2032,7 +2031,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart15 Animation Wealth & Health by Years
+## Chart15 Animation Wealth & Health by Years
 <http://robslink.com/SAS/democd27/gapminder.htm>
 ![](/img/Robert SAS Graphics/gapminder_cap.png)
 code link: <http://robslink.com/SAS/democd27/gapminder_import.sas>
@@ -2181,7 +2180,7 @@ ods listing;
 ```
 Back to [Index](#index)
 
-##Chart16 Sales Analysis of Shoe Brands
+## Chart16 Sales Analysis of Shoe Brands
 ![](/img/Robert SAS Graphics/shoe_sales.png)
 
 ```sas
@@ -2278,7 +2277,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart17 State Population Growth Comparison
+## Chart17 State Population Growth Comparison
 ![](/img/Robert SAS Graphics/population_graph.png)
 
 ```sas
@@ -2343,7 +2342,7 @@ ODS LISTING;
 ```
 Back to [Index](#index)
 
-##Chart18 Catalyst Experiment
+## Chart18 Catalyst Experiment
 ![](/img/Robert SAS Graphics/catalyst_3d_surface.png)
 
 ```sas
