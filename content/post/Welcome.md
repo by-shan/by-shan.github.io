@@ -4,8 +4,6 @@ date: 2020-01-01
 categories:
 - blog
 tags:
-keywords:
-
 autoThumbnailImage: false
 thumbnailImagePosition: "top"
 thumbnailImage: //d1u9biwaxjngwg.cloudfront.net/welcome-to-tranquilpeak/city-750.jpg
