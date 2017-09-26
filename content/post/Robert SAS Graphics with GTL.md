@@ -2,6 +2,7 @@
 title: "Robert Allison's Wonderful SAS Graphics with GTL"
 date: 2017-09-23
 categories:
+- Notebook
 tags:
 - SAS
 - Visualization
