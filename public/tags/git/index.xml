@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Boyao SHAN</title>
+    <link>https://by-shan.github.io/tags/git/</link>
+    <description>Recent content in Git on Boyao SHAN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://by-shan.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Notes_Git</title>
+      <link>https://by-shan.github.io/2017/09/notes_git/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://by-shan.github.io/2017/09/notes_git/</guid>
+      <description>&lt;p&gt;This Git Nootebook is kept for my self-learning about Git. Though Rstudio is much easier to use git function, sometimes you will find only the git command can rescue you.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
