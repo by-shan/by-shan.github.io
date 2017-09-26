@@ -1,0 +1,861 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+  
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.26 with theme Tranquilpeak 0.4.1-BETA">
+    <title>Notes_Git</title>
+    <meta name="author" content="Boyao SHAN">
+    <meta name="keywords" content="">
+
+    <link rel="icon" href="https://by-shan.github.io/favicon.png">
+    
+
+    
+    <meta name="description" content="This Git Nootebook is kept for my self-learning about Git. Though Rstudio is much easier to use git function, sometimes you will find only the git command can rescue you.
+">
+    <meta property="og:description" content="This Git Nootebook is kept for my self-learning about Git. Though Rstudio is much easier to use git function, sometimes you will find only the git command can rescue you.
+">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Notes_Git">
+    <meta property="og:url" content="/2017/09/notes_git/">
+    <meta property="og:site_name" content="Boyao SHAN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Boyao SHAN">
+    <meta name="twitter:description" content="This Git Nootebook is kept for my self-learning about Git. Though Rstudio is much easier to use git function, sometimes you will find only the git command can rescue you.
+">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="//www.gravatar.com/avatar/61d231fc854ec12fd36cec2890d42d4e?s=640">
+    
+
+    
+      <meta property="og:image" content="//git-scm.com/images/logo@2x.png">
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://by-shan.github.io/css/style-fpbzgxsy0kgmdvyrj5ykkg6ratccrk3gocmaqn4xpcjywmv5dteilzucro4f.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://by-shan.github.io/">Boyao SHAN</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://by-shan.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="//www.gravatar.com/avatar/61d231fc854ec12fd36cec2890d42d4e?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://by-shan.github.io/#about">
+          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/61d231fc854ec12fd36cec2890d42d4e?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Boyao SHAN</h4>
+        
+          <h5 class="sidebar-profile-bio">Big fan of statistical analysis</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/by-shan" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/profile/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Notes_Git
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-09-26T00:00:00Z">
+        
+  September 26, 2017
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://by-shan.github.io/categories/notebook">Notebook</a>
+    
+  
+
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>This Git Nootebook is kept for my self-learning about Git. Though Rstudio is much easier to use git function, sometimes you will find only the git command can rescue you.
+</p>
+
+<h1 id="getting-started">Getting Started</h1>
+
+<h2 id="setting-up-a-repository">Setting up a repository</h2>
+
+<p><a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository">https://www.atlassian.com/git/tutorials/setting-up-a-repository</a>
+The high level points / process:
+* Initializing a new Git repo
+* Cloning an existing Git repo
+* Committing a modified version of a file to the repo
+* Configuring a Git repo for remote collaboration
+* Common Git version control commands</p>
+
+<h3 id="initializing-a-new-repository-git-init">Initializing a new repository: git init</h3>
+
+<p>To create a new repo, you &lsquo;wll use <code>git init</code> command. Executing this command will create a new <code>.git</code> subdirectory in your current working directory. This will also create a new master branch.</p>
+
+<pre><code class="language-git">cd / path / existing / code   ## locate within an already existing repo
+git init        ## versioning an existing project
+</code></pre>
+
+<h3 id="cloning-an-existing-repo-git-clone">Cloning an existing repo: git clone</h3>
+
+<p>Obtain a local development clone from remote repo. Once a developer has obtained a working copy, all version contro operations are managed through their local repository.</p>
+
+<pre><code class="language-git">git clone &lt;repo url&gt;
+git clone git@github.com/shan-boyao/by.shan.github.io.git
+</code></pre>
+
+<h3 id="saving-changes-to-the-repo-git-add-git-commit">Saving changes to the repo: git add &amp; git commit</h3>
+
+<pre><code class="language-git">cd / path / to / project
+echo &quot;hello world&quot; &gt;&gt; CommitTest.txt
+git add CommitTest.txt
+git commit -m &quot;added CommiTest.txt to the repo&quot;
+</code></pre>
+
+<p><code>git add</code> command adds a change in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit. However, git add doesn&rsquo;t really affect the repository in any significant way—changes are not actually recorded until you run <code>git commit</code>.</p>
+
+<pre><code class="language-git">git add &lt;file&gt;  ##Stage all changes in &lt;file&gt; for the next commit.
+git add &lt;dir&gt;  ##Stage all changes in &lt;dir&gt;
+git add -p  ##Begin interactive staging session
+</code></pre>
+
+<p>In conjunction with these commands, you&rsquo;ll also need <code>git status</code> to view the state of the working directory and the staging area.
+The <code>git commit</code> command commits the staged snapshot to the project history. Committed snapshots can be thought of as “safe” versions of a project—Git will never change them unless you explicity ask it to. Along with<code>git add</code>, this is one of the most important Git commands</p>
+
+<pre><code class="language-git">git add .
+git commit ##Commit the staged snapshot. This will launch a text editor prompting you for a commit message. 
+git commit -m &quot;&lt;message&gt;&quot;
+git commit -a ##Commit a snapshot of all changes in &lt;dir&gt;
+</code></pre>
+
+<h2 id="repo-torepo-collaboration-git-push">Repo-torepo collaboration: git push</h2>
+
+<p>It’s important to understand that Git’s idea of a “working copy” is very different from the working copy you get by checking out source code from an SVN repository. Unlike SVN, Git makes no distinction between the working copies and the central repository—they&rsquo;re all full-fledged Git repositories.</p>
+
+<h4 id="bare-vs-cloned-repositories">Bare vs. cloned repositories</h4>
+
+<p>If you used <code>git clone</code> in the previous &ldquo;Initializing a new Repository&rdquo; section to set up your local repository, your repository is already configured for remote collaboration. <code>git clone</code> will automatically configure your repo with a remote pointed to the Git URL you cloned it from. This means that once you make changes to a file and commit them, you can <code>git push</code> those changes to the remote repository.
+If you used <code>git init</code> to make a fresh repo, you&rsquo;ll have no remote repo to push changes to. A common pattern when initializing a new repo is to go to a hosted Git service like Bitbucket and create a repo there. The service will provide a Git URL that you can then add to your local Git repository and <code>git push</code> to the hosted repo. Once you have created a remote repo with your service of choice you will need to update your local repo with a mapping. We discuss this process in the Configuration &amp; Set Up guide below.
+If you prefer to host your own remote repo, you&rsquo;ll need to set up a &ldquo;Bare Repository.&rdquo; Both <code>git init</code> and <code>git clone</code> accept a <code>--bare</code> argument. The most common use case for bare repo is to create a remote central Git repository.</p>
+
+<h3 id="configuration-set-up-git-config">Configuration &amp; set up: git config</h3>
+
+<p>The first thing you’ll want to do after installing Git is tell it your name/email and customize some of the default settings. A typical initial configuration might look something like the following:</p>
+
+<pre><code class="language-git">git config --global user.name &quot;SHAN Boyao&quot;
+git config --global user.email john@example.com
+</code></pre>
+
+<h2 id="saving-changes">Saving changes</h2>
+
+<h3 id="git-add">git add</h3>
+
+<h3 id="git-commit">git commit</h3>
+
+<p><a href="https://www.atlassian.com/git/tutorials/saving-changes#git-commit">https://www.atlassian.com/git/tutorials/saving-changes#git-commit</a></p>
+
+<h3 id="git-stash">git stash</h3>
+
+<p><code>git stash</code> temporarily shelves (or stashes) changes you&rsquo;ve made to your working copy so you can work on something else, and then come back and re-apply them later on. Stashing is handy if you need to quickly switch context and work on something else, but you&rsquo;re mid-way through a code change and aren&rsquo;t quite ready to commit.
+<a href="https://www.atlassian.com/git/tutorials/git-stash">https://www.atlassian.com/git/tutorials/git-stash</a></p>
+
+<h3 id="gitignore">.gitignore</h3>
+
+<p>Git sees every file in your working copy as one of three things:
+1.tracked - a file which has been previously staged or committed;
+2.untracked - a file which has not been staged or committed; or
+3.ignored - a file which Git has been explicitly told to ignore.</p>
+
+<p>Ignored files are usually build artifacts and machine generated files that can be derived from your repository source or should otherwise not be committed. Some common examples are:
+•dependency caches, such as the contents of /node_modules or /packages
+•compiled code, such as .o, .pyc, and .class files
+•build output directories, such as /bin, /out, or /target
+•files generated at runtime, such as .log, .lock, or .tmp
+•hidden system files, such as .DS_Store or Thumbs.db
+•personal IDE config files, such as .idea/workspace.xml</p>
+
+<p>Ignored files are tracked in a special file named .gitignore that is checked in at the root of your repository. There is no explicit git ignore command: instead the .gitignore file must be edited and committed by hand when you have new files that you wish to ignore. .gitignore files contain patterns that are matched against file names in your repository to determine whether or not they should be ignored.</p>
+
+<p>See more:
+<a href="https://www.atlassian.com/git/tutorials/git-stash">https://www.atlassian.com/git/tutorials/git-stash</a></p>
+
+<h2 id="inspecting-a-repository">Inspecting a repository</h2>
+
+<p><a href="https://www.atlassian.com/git/tutorials/inspecting-a-repository">https://www.atlassian.com/git/tutorials/inspecting-a-repository</a></p>
+
+<h3 id="git-status">git status</h3>
+
+<p>The <code>git status</code> command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven’t, and which files aren’t being tracked by Git. Status output does <em>not</em> show you any information regarding the committed project history. For this, you need to use <code>git log</code>.</p>
+
+<h3 id="git-log">git log</h3>
+
+<p>The <code>git log</code> command displays committed snapshots. It lets you list the project history, filter it, and search for specific changes. While git status lets you inspect the working directory and the staging area, <code>git log</code> only operates on the committed history.</p>
+
+<h2 id="undoing-changes">Undoing changes</h2>
+
+<p><a href="https://www.atlassian.com/git/tutorials/undoing-changes">https://www.atlassian.com/git/tutorials/undoing-changes</a></p>
+
+<p>##Rewriting history
+<a href="https://www.atlassian.com/git/tutorials/rewriting-history">https://www.atlassian.com/git/tutorials/rewriting-history</a></p>
+
+<h1 id="collaborating">Collaborating</h1>
+
+<h2 id="syncing">Syncing</h2>
+
+<p><a href="https://www.atlassian.com/git/tutorials/syncing">https://www.atlassian.com/git/tutorials/syncing</a>
+Git’s collaboration model gives every developer their own copy of the repository, complete with its own local history and branch structure. Users typically need to share a series of commits rather than a single changeset. Instead of committing a changeset from a working copy to the central repository, Git lets you share entire branches between repositories.</p>
+
+<h3 id="git-remote">git remote</h3>
+
+<p>The <code>git remote</code> command lets you create, view, and delete connections to other repositories. Remote connections are more like bookmarks rather than direct links into other repositories. Instead of providing real-time access to another repository, they serve as convenient names that can be used to reference a not-so-convenient URL.</p>
+
+<pre><code class="language-git">git remote  ##List remote connections
+git remote -v  ##Same as above, include URL of each connection
+git remote add &lt;name&gt; &lt;url&gt;  ##create a new connection to a remote repository
+git remote rm &lt;name&gt;  ##remove connection &lt;name&gt;
+git remote rename &lt;old-name&gt; &lt;new-name&gt;  ##rename
+</code></pre>
+
+<h3 id="git-fetch">git fetch</h3>
+
+<p>The  <code>git fetch</code> command imports commits from a remote repository into your local repo. The resulting commits are stored as remote branches instead of the normal local branches that we’ve been working with. This gives you a chance to review changes before integrating them into your copy of the project.</p>
+
+<h3 id="git-pull">git pull</h3>
+
+<p>Merging upstream changes into your local repository is a common task in Git-based collaboration workflows. We already know how to do this with <code>git fetch</code> followed by <code>git merge</code>, but <code>git pull</code> rolls this into a single command.</p>
+
+<p>###git push
+Pushing is how you transfer commits from your local repository to a remote repo. It&rsquo;s the counterpart to <code>git fetch</code>, but whereas fetching imports commits to local branches, pushing exports commits to remote branches. This has the potential to overwrite changes, so you need to be careful how you use it. These issues are discussed below.</p>
+
+<pre><code class="language-git">git push &lt;remote&gt; &lt;branch&gt;
+git push &lt;remote&gt; --force
+git push &lt;remote&gt; --all  ##push all local branches to specified remote
+</code></pre>
+
+<h2 id="making-a-pull-request">Making a Pull Request</h2>
+
+<p><a href="https://www.atlassian.com/git/tutorials/making-a-pull-request">https://www.atlassian.com/git/tutorials/making-a-pull-request</a></p>
+
+<h3 id="how-it-works">How it works</h3>
+
+<ol>
+<li>A developer creates the feature in a dedicated branch in their local repo.</li>
+<li>The developer pushes the branch to a public Github repository.</li>
+<li>The developer files a pull request via Github.</li>
+<li>The rest of the team reviews the code, discusses it, and alters it.</li>
+<li>The project maintainer merges the feature into the official repository and closes the pull request.</li>
+</ol>
+
+<h2 id="using-branches">Using branches</h2>
+
+<p><a href="https://www.atlassian.com/git/tutorials/using-branches">https://www.atlassian.com/git/tutorials/using-branches</a></p>
+
+<h3 id="git-branch">git branch</h3>
+
+<h3 id="git-checkout">git checkout</h3>
+
+<p>The <code>git checkout</code> command lets you navigate between the branches created by <code>git branch</code>. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch. Think of it as a way to select which line of development you’re working on.</p>
+
+<pre><code class="language-git">git checkout &lt;existing-branch&gt;
+git chekout -b &lt;new-branch&gt;
+</code></pre>
+
+<h3 id="git-merge">git merge</h3>
+
+<p>Merging is Git&rsquo;s way of putting a forked history back together again. The <code>git merge</code> command lets you take the independent lines of development created by git branch and integrate them into a single branch.</p>
+
+<p>Note that all of the commands presented below merge into the current branch. The current branch will be updated to reflect the merge, but the target branch will be completely unaffected. Again, this means that <code>git merge</code> is often used in conjunction with <code>git checkout</code> for selecting the current branch and <code>git branch -d</code> for deleting the obsolete target branch.</p>
+
+<h2 id="comparing-workflows">Comparing workflows</h2>
+
+<p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows">https://www.atlassian.com/git/tutorials/comparing-workflows</a></p>
+
+<h1 id="migrating-to-git">Migrating to Git</h1>
+
+<p>##SVN to Git
+<a href="https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration">https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration</a></p>
+
+<h2 id="toc_30">&hellip;</h2>
+
+<h1 id="advanced-tips">Advanced Tips</h1>
+
+<p><End></p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://by-shan.github.io//tags/git/">Git</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/notes_vim/" data-tooltip="Notes_Vim">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://by-shan.github.io/2017/09/notes_git/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://by-shan.github.io/2017/09/notes_git/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://by-shan.github.io/2017/09/notes_git/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2017 Boyao SHAN. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/notes_vim/" data-tooltip="Notes_Vim">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://by-shan.github.io/2017/09/notes_git/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://by-shan.github.io/2017/09/notes_git/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://by-shan.github.io/2017/09/notes_git/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fby-shan.github.io%2F2017%2F09%2Fnotes_git%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fby-shan.github.io%2F2017%2F09%2Fnotes_git%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fby-shan.github.io%2F2017%2F09%2Fnotes_git%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="//www.gravatar.com/avatar/61d231fc854ec12fd36cec2890d42d4e?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Boyao SHAN</h4>
+    
+      <div id="about-card-bio">Big fan of statistical analysis</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Statisticial Analyst
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China,SH
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://by-shan.github.io/2017/09/notes_git/">
+                <h3 class="media-heading">Notes_Git</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>This Git Nootebook is kept for my self-learning about Git. Though Rstudio is much easier to use git function, sometimes you will find only the git command can rescue you.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://by-shan.github.io/2017/09/notes_vim/">
+                <h3 class="media-heading">Notes_Vim</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://by-shan.github.io/2017/09/robert-allisons-wonderful-sas-graphics-with-gtl/">
+                <h3 class="media-heading">Robert Allison&#39;s Wonderful SAS Graphics with GTL</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>This post is copy from Robert Allison&rsquo;s blog, there are 18 wonderful SAS plot &hellip;
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://by-shan.github.io/2017/09/welcome/">
+                <h3 class="media-heading">Welcome</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Welcom to Boyao SHAN&rsquo;s Blog.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://by-shan.github.io/post/">
+                <h3 class="media-heading">Posts</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         5 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://by-shan.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" integrity="sha256-IFHWFEbU2/+wNycDECKgjIRSirRNIDp2acEB5fvdVRU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js" integrity="sha256-+mpyNVJsNt4rVXCw0F+pAOiB3YxmHgrbJsx4ecPuUaI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.js" integrity="sha256-vMxgR/7FtLovVA+IPrR7+xTgIgARH7y9VZQnmmi0HDI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.js" integrity="sha256-N0qFUh7/9vLvia87dDndewmsgsyYoNkdA212tPc+2NI=" crossorigin="anonymous"></script>
+
+
+<script src="https://by-shan.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/by-shan.github.io\/2017\/09\/notes_git\/';
+          
+            this.page.identifier = '\/2017\/09\/notes_git\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

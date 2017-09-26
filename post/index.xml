@@ -6,18 +6,28 @@
     <description>Recent content in Posts on Boyao SHAN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://by-shan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Welcome</title>
-      <link>https://by-shan.github.io/2020/01/welcome/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <title>Notes_Git</title>
+      <link>https://by-shan.github.io/2017/09/notes_git/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://by-shan.github.io/2020/01/welcome/</guid>
-      <description>&lt;p&gt;Welcom to Boyao SHAN&amp;rsquo;s Blog.
+      <guid>https://by-shan.github.io/2017/09/notes_git/</guid>
+      <description>&lt;p&gt;This Git Nootebook is kept for my self-learning about Git. Though Rstudio is much easier to use git function, sometimes you will find only the git command can rescue you.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Notes_Vim</title>
+      <link>https://by-shan.github.io/2017/09/notes_vim/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://by-shan.github.io/2017/09/notes_vim/</guid>
+      <description>&lt;p&gt;This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
 &lt;/p&gt;</description>
     </item>
     
@@ -28,6 +38,16 @@
       
       <guid>https://by-shan.github.io/2017/09/robert-allisons-wonderful-sas-graphics-with-gtl/</guid>
       <description>&lt;p&gt;This post is copy from Robert Allison&amp;rsquo;s blog, there are 18 wonderful SAS plot &amp;hellip;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>https://by-shan.github.io/2017/09/welcome/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://by-shan.github.io/2017/09/welcome/</guid>
+      <description>&lt;p&gt;Welcom to Boyao SHAN&amp;rsquo;s Blog.
 &lt;/p&gt;</description>
     </item>
     

@@ -1,0 +1,875 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+  
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.26 with theme Tranquilpeak 0.4.1-BETA">
+    <title>Notes_Vim</title>
+    <meta name="author" content="Boyao SHAN">
+    <meta name="keywords" content="">
+
+    <link rel="icon" href="https://by-shan.github.io/favicon.png">
+    
+
+    
+    <meta name="description" content="This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
+">
+    <meta property="og:description" content="This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
+">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Notes_Vim">
+    <meta property="og:url" content="/2017/09/notes_vim/">
+    <meta property="og:site_name" content="Boyao SHAN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Boyao SHAN">
+    <meta name="twitter:description" content="This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
+">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="//www.gravatar.com/avatar/61d231fc854ec12fd36cec2890d42d4e?s=640">
+    
+
+    
+      <meta property="og:image" content="//img3.imgtn.bdimg.com/it/u=3504511844,2027329361&fm=27&gp=0.jpg">
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://by-shan.github.io/css/style-fpbzgxsy0kgmdvyrj5ykkg6ratccrk3gocmaqn4xpcjywmv5dteilzucro4f.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://by-shan.github.io/">Boyao SHAN</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://by-shan.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="//www.gravatar.com/avatar/61d231fc854ec12fd36cec2890d42d4e?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://by-shan.github.io/#about">
+          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/61d231fc854ec12fd36cec2890d42d4e?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Boyao SHAN</h4>
+        
+          <h5 class="sidebar-profile-bio">Big fan of statistical analysis</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/by-shan" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/profile/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://by-shan.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Notes_Vim
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-09-26T00:00:00Z">
+        
+  September 26, 2017
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://by-shan.github.io/categories/notebook">Notebook</a>
+    
+  
+
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
+</p>
+
+<p>摘自《鸟哥Linux私房菜》</p>
+
+<h1 id="vim-程序编辑器"><strong>Vim</strong>程序编辑器</h1>
+
+<h2 id="为何要学-vim">为何要学 vim</h2>
+
+<ul>
+<li>所有的 Unix Like 系统都会内置 vi 文书编辑器，其他的文书编辑器则不一定会存在；</li>
+<li>很多个别软件的编辑接口都会主动调用 vi （例如未来会谈到的 crontab, visudo, edquota
+等指令）；</li>
+<li>vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的正确性，方便程序设计；</li>
+<li>因为程序简单，编辑速度相当快速。</li>
+</ul>
+
+<h2 id="vi的使用">Vi的使用</h2>
+
+<ul>
+<li><strong>一般指令模式</strong>
+以 vi 打开一个文件就直接进入一般指令模式了（这是默认的模式，也简称为一般模式）。在这个模式中， 你可以使用“上下左右”按键来移动光标，你可以使用“删除字符”或“删除整列”来处理文件内容， 也可以使用“复制、贴上”来处理你的文件数据。</li>
+<li><strong>编辑模式</strong>
+在一般指令模式中可以进行删除、复制、贴上等等的动作，但是却无法编辑文件内容的！要等到你按下“i, I, o, O, a, A, r, R”等任何一个字母之后才会进入编辑模式。注意了！通常在  Linux 中，按下这些按键时，在画面的左下方会出现“ INSERT 或 REPLACE ”的字样，此时才可以进行编辑。而如果要回到一般指令模式时，则必须要按下“Esc”这个按键即可退出编辑模式。</li>
+<li><strong>命令行命令模式</strong>
+在一般模式当中，输入“ : / ? ”三个中的任何一个按钮，就可以将光标移动到最下面那一列。在这个模式当中， 可以提供你“搜寻数据”的动作，而读取、存盘、大量取代字符、离开 vi 、显示行号等等的动作则是在此模式中达成的！</li>
+</ul>
+
+<h2 id="简易操作">简易操作</h2>
+
+<ol>
+<li>使用 “vi filename” 进入一般指令模式
+<code>vim
+/bin/vi welcome.txt   ##create file welcom.txt
+</code></li>
+<li>按下 i 进入编辑模式，开始编辑文字</li>
+<li>按下【ESC】按钮回到一般指令模式</li>
+<li>进入命令行界面，文件存储并离开 vi 环境
+<code>vim
+:wq
+</code></li>
+</ol>
+
+<h2 id="按键说明">按键说明</h2>
+
+<h3 id="一般指令模式可用的按钮说明-光标移动-复制黏贴-搜索取代">一般指令模式可用的按钮说明：光标移动、复制黏贴、搜索取代</h3>
+
+<p><strong><em>移动光标的方法</em></strong>
+| 按键               | 功能                                       |
+| &mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- |
+| h 或 向左方向键（←）     | 光标向左移动一个字符                               |
+| j 或 向下方向键（↓）     | 光标向下移动一个字符                               |
+| k 或 向上方向键（↑）     | 光标向上移动一个字符                               |
+| l 或 向右方向键（→）     | 光标向右移动一个字符                               |
+| <strong>[Ctrl] + [f]</strong> | <strong>屏幕“向下”移动一页，相当于 [Page Down]按键 （常用）</strong>    |
+| <strong>[Ctrl] + [b]</strong> | <strong>屏幕“向上”移动一页，相当于 [Page Up] 按键（常用）</strong>      |
+| [Ctrl] + [d]     | 屏幕“向下”移动半页                               |
+| [Ctrl] + [u]     | 屏幕“向上”移动半页                               |
+| +                | 光标移动到非空白字符的下一列                           |
+| -                | 光标移动到非空白字符的上一列                           |
+| n<space>         | n<space>那个 n 表示“数字”，例如 20 。按下数字后再按空白键，光标会向右移动这一列的 n 个字符。例如 20<space> 则光标会向后面移动 20个字符距离。 |
+| <strong>0 或功能键[Home]</strong> | <strong>这是数字“ 0 ”：移动到这一列的最前面字符处（常用）</strong>          |
+| <strong>$ 或功能键[End]</strong>  | <strong>移动到这一列的最后面字符处（常用）</strong>                    |
+| H                | 光标移动到这个屏幕的最上方那一列的第一个字符                   |
+| M                | 光标移动到这个屏幕的中央那一列的第一个字符                    |
+| L                | 光标移动到这个屏幕的最下方那一列的第一个字符                   |
+| <strong>G</strong>            | <strong>移动到这个文件的最后一列（常用）</strong>                     |
+| nG               | n 为数字。移动到这个文件的第 n 列。例如20G 则会移动到这个文件的第 20 列（可配合:set nu） |
+| <strong>gg</strong>           | 移动到这个文件的第一列，相当于 1G 啊!（常用）                |
+| n<Enter>         | n 为数字。光标向下移动 n 列（常用）                     |</p>
+
+<p><strong><em>搜寻与取代</em></strong>
+| 按键                        | 功能                                       |
+| &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- |
+| <strong>/word</strong>                 | 向光标之下寻找一个名称为 word 的字串。例如要在文件内搜寻 vbird 这个字串，就输入/vbird 即可！ （常用） |
+| <strong>?word</strong>                 | 向光标之上寻找一个字串名称为 word 的字串。                 |
+| n                         | 这个 n 是英文按键。代表“<u>重复前一个搜寻的动作</u>”。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字串，则按下n 后，会向下继续搜寻下一个名称为 vbird 的字串。如果是执行 ?vbird 的话，那么按下 n则会向上继续搜寻名称为 vbird 的字串！ |
+| N                         | 这个 N 是英文按键。与 n 刚好相反，为“反向”进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示“向上”搜寻 vbird 。 |
+| <strong>:n1,n2s/word1/word2/g</strong> | n1 与 n2 为数字。在第 n1 与 n2 列之间寻找word1 这个字串，并将该字串取代为 word2！举例来说，在 100 到 200 列之间搜寻 vbird并取代为 VBIRD则：“:100,200s/vbird/VBIRD/g”。（常用） |
+| <strong>:1,$s/word1/word2/g</strong>   | 从第一列到最后一列寻找 word1 字串，并将该字串取代为 word2 ！（常用） |
+| <strong>:1,$s/word1/word2/gc</strong>  | 从第一列到最后一列寻找 word1 字串，并将该字串取代为 word2 ！且在取代前显示提示字符给使用者确认 （confirm） 是否需要取代！（常用） |</p>
+
+<p><strong><em>删除、复制与黏贴</em></strong>
+| 按键           | 功能                                       |
+| &mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- |
+| <strong>x, X</strong>     | 在一列字当中，x 为向后删除一个字符 （相当于 [del] 按键）， X 为向前删除一个字符（相当于 [backspace] 亦即是倒退键） （常用） |
+| nx           | n 为数字，连续向后删除 n 个字符。举例来说，我要连续删除 10 个字符， “10x”。 |
+| <strong>dd</strong>       | 删除光标所在的那一整列（常用）                          |
+| ndd          | n 为数字。删除光标所在的向下 n 列，例如20dd 则是删除 20 列 （常用） |
+| d1G          | 删除光标所在到第一列的所有数据                          |
+| dG           | 删除光标所在到最后一列的所有数据                         |
+| d$           | 删除光标所在处，到该列的最后一个字符                       |
+| d0           | 那个是数字的 0 ，删除光标所在处，到该列的最前面一个字符            |
+| <strong>yy</strong>       | 复制光标所在的那一列（常用）                           |
+| nyy          | n 为数字。复制光标所在的向下 n 列，例如20yy 则是复制 20 列（常用） |
+| y1G          | 复制光标所在列到第一列的所有数据                         |
+| yG           | 复制光标所在列到最后一列的所有数据                        |
+| y0           | 复制光标所在的那个字符到该列行首的所有数据                    |
+| y$           | 复制光标所在的那个字符到该列行尾的所有数据                    |
+| <strong>p, P</strong>     | p 为将已复制的数据在光标下一列贴上，P 则为贴在光标上一列！ 举例来说，我目前光标在第 20 列，且已经复制了 10 列数据。则按下 p 后， 那 10 列数据会贴在原本的 20 列之后，亦即由 21 列开始贴。但如果是按下 P呢？ 那么原本的第 20 列会被推到变成 30列。 （常用） |
+| J            | 将光标所在列与下一列的数据结合成同一列                      |
+| c            | 重复删除多个数据，例如向下删除 10 列，[10cj ]             |
+| <strong>u</strong>        | 复原前一个动作。（常用）                             |
+| <strong>[Ctrl]+r</strong> | 重做上一个动作。（常用）                             |
+| <strong>.</strong>        | 不要怀疑！这就是小数点！意思是重复前一个动作的意思。 如果你想要重复删除、重复贴上等等动作，按下小数点“.”就好了！ （常用） |</p>
+
+<h3 id="一般指令模式切换到编辑模式可用的按钮说明">一般指令模式切换到编辑模式可用的按钮说明</h3>
+
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>功能</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>i, I</td>
+<td>进入插入模式（Insert mode）：i为“从目前光标所在处插入”， I为“在目前所在列的第一个非空白字符处开始插入”。 （常用）</td>
+</tr>
+
+<tr>
+<td>a, A</td>
+<td>进入插入模式（Insert mode）：a为“从目前光标所在的下一个字符处开始插入”， A 为“从光标所在列的最后一个字符处开始插入”。（常用）</td>
+</tr>
+
+<tr>
+<td>o, O</td>
+<td>进入插入模式（Insert mode）：这是英文字母 o 的大小写。o为“在目前光标所在的下一列处插入新的一列”； O 为在目前光标所在处的上一列插入新的一列！（常用）</td>
+</tr>
+
+<tr>
+<td>r, R</td>
+<td>进入取代模式（Replacemode）：r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；（常用）</td>
+</tr>
+
+<tr>
+<td>[Esc]</td>
+<td>退出编辑模式，回到一般指令模式中（常用）</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="一般指令模式切换到命令行界面的可用按钮说明">一般指令模式切换到命令行界面的可用按钮说明</h3>
+
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>功能</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>:w</td>
+<td>将编辑的数据写入硬盘文件中（常用）</td>
+</tr>
+
+<tr>
+<td>:w!</td>
+<td>若文件属性为“只读”时，强制写入该文件。不过，到底能不能写入， 还是跟你对该文件的文件权限有关啊！</td>
+</tr>
+
+<tr>
+<td>:q</td>
+<td>离开 vi （常用）</td>
+</tr>
+
+<tr>
+<td>:q!</td>
+<td>若曾修改过文件，又不想储存，使用 ! 为强制离开不储存盘案。</td>
+</tr>
+
+<tr>
+<td>:wq</td>
+<td>储存后离开，若为 :wq! 则为强制储存后离开 （常用）</td>
+</tr>
+
+<tr>
+<td>ZZ</td>
+<td>这是大写的 Z 喔！若文件没有更动，则不储存离开，若文件已经被更动过，则储存后离开！</td>
+</tr>
+
+<tr>
+<td>:w [filename]</td>
+<td>将编辑的数据储存成另一个文件（类似另存新文件）</td>
+</tr>
+
+<tr>
+<td>:r [filename]</td>
+<td>在编辑的数据中，读入另一个文件的数据。亦即将“filename” 这个文件内容加到光标所在列后面</td>
+</tr>
+
+<tr>
+<td>:n1,n2 w [filename]</td>
+<td>将 n1 到 n2 的内容储存成 filename 这个文件。</td>
+</tr>
+
+<tr>
+<td>:! command</td>
+<td>暂时离开 vi 到命令行界面下执行 command 的显示结果！例如 “:! ls /home”即可在 vi 当中察看 /home 下面以ls 输出的文件信息！</td>
+</tr>
+
+<tr>
+<td>vim 环境的变更</td>
+<td>vim 环境的变更</td>
+</tr>
+
+<tr>
+<td>:set nu</td>
+<td>显示行号，设置之后，会在每一列的字首显示该列的行号</td>
+</tr>
+
+<tr>
+<td>:set nonu</td>
+<td>与 set nu 相反，为取消行号！</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://by-shan.github.io//tags/vim/">Vim</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/notes_git/" data-tooltip="Notes_Git">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/robert-allisons-wonderful-sas-graphics-with-gtl/" data-tooltip="Robert Allison&#39;s Wonderful SAS Graphics with GTL">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://by-shan.github.io/2017/09/notes_vim/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://by-shan.github.io/2017/09/notes_vim/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://by-shan.github.io/2017/09/notes_vim/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2017 Boyao SHAN. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/notes_git/" data-tooltip="Notes_Git">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/robert-allisons-wonderful-sas-graphics-with-gtl/" data-tooltip="Robert Allison&#39;s Wonderful SAS Graphics with GTL">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://by-shan.github.io/2017/09/notes_vim/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://by-shan.github.io/2017/09/notes_vim/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://by-shan.github.io/2017/09/notes_vim/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fby-shan.github.io%2F2017%2F09%2Fnotes_vim%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fby-shan.github.io%2F2017%2F09%2Fnotes_vim%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fby-shan.github.io%2F2017%2F09%2Fnotes_vim%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="//www.gravatar.com/avatar/61d231fc854ec12fd36cec2890d42d4e?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Boyao SHAN</h4>
+    
+      <div id="about-card-bio">Big fan of statistical analysis</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Statisticial Analyst
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China,SH
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://by-shan.github.io/2017/09/notes_git/">
+                <h3 class="media-heading">Notes_Git</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>This Git Nootebook is kept for my self-learning about Git. Though Rstudio is much easier to use git function, sometimes you will find only the git command can rescue you.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://by-shan.github.io/2017/09/notes_vim/">
+                <h3 class="media-heading">Notes_Vim</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://by-shan.github.io/2017/09/robert-allisons-wonderful-sas-graphics-with-gtl/">
+                <h3 class="media-heading">Robert Allison&#39;s Wonderful SAS Graphics with GTL</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>This post is copy from Robert Allison&rsquo;s blog, there are 18 wonderful SAS plot &hellip;
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://by-shan.github.io/2017/09/welcome/">
+                <h3 class="media-heading">Welcome</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Welcom to Boyao SHAN&rsquo;s Blog.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://by-shan.github.io/post/">
+                <h3 class="media-heading">Posts</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         5 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://by-shan.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" integrity="sha256-IFHWFEbU2/+wNycDECKgjIRSirRNIDp2acEB5fvdVRU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js" integrity="sha256-+mpyNVJsNt4rVXCw0F+pAOiB3YxmHgrbJsx4ecPuUaI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.js" integrity="sha256-vMxgR/7FtLovVA+IPrR7+xTgIgARH7y9VZQnmmi0HDI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.js" integrity="sha256-N0qFUh7/9vLvia87dDndewmsgsyYoNkdA212tPc+2NI=" crossorigin="anonymous"></script>
+
+
+<script src="https://by-shan.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/by-shan.github.io\/2017\/09\/notes_vim\/';
+          
+            this.page.identifier = '\/2017\/09\/notes_vim\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+
