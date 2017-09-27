@@ -6,7 +6,7 @@ categories:
 tags:
 - Vim
 thumbnailImagePosition: left
-thumbnailImage: //img3.imgtn.bdimg.com/it/u=3504511844,2027329361&fm=27&gp=0.jpg
+thumbnailImage: //http://img3.wikia.nocookie.net/__cb4/vim/images/8/89/Wiki-wordmark.png
 ---
 This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
 <!--more-->
