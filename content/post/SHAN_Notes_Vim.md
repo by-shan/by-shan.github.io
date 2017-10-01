@@ -45,7 +45,7 @@ This Vim Nootebook is kept for my self-learning about Vim. When learning to use 
 
 ### 一般指令模式可用的按钮说明：光标移动、复制黏贴、搜索取代
 
-***移动光标的方法***
+#### 移动光标的方法
 
 | 按键               | 功能                                       |
 | ---------------- | ---------------------------------------- |
@@ -70,7 +70,7 @@ This Vim Nootebook is kept for my self-learning about Vim. When learning to use 
 | gg           | 移动到这个文件的第一列，相当于 1G 啊!（常用）                |
 | n<Enter>         | n 为数字。光标向下移动 n 列（常用）                     |
 
-***搜寻与取代***
+#### 搜寻与取代
 
 | 按键                        | 功能                                       |
 | ------------------------- | ---------------------------------------- |
@@ -82,7 +82,7 @@ This Vim Nootebook is kept for my self-learning about Vim. When learning to use 
 | :1,$s/word1/word2/g   | 从第一列到最后一列寻找 word1 字串，并将该字串取代为 word2 ！（常用） |
 | :1,$s/word1/word2/gc  | 从第一列到最后一列寻找 word1 字串，并将该字串取代为 word2 ！且在取代前显示提示字符给使用者确认 （confirm） 是否需要取代！（常用） |
 
-***删除、复制与黏贴***
+#### 删除、复制与黏贴
 
 | 按键           | 功能                                       |
 | ------------ | ---------------------------------------- |
