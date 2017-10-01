@@ -15,9 +15,9 @@
 baseurl = "https://by-shan.github.io/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "Boyao SHAN"
+title = "Boyao SHAN: to Learn :) to Recall :("
 theme = "hugo-tranquilpeak-theme"
-disqusShortname = "hugo-tranquilpeak-theme"
+disqusShortname = "boyaoshan"
 # googleAnalytics = ""
 paginate = 7
 canonifyurls = true
@@ -32,7 +32,7 @@ canonifyurls = true
 
 [author]
   name = "Boyao SHAN"
-  bio = "Big fan of statistical analysis"
+  bio = "Big fan of Data Science"
   job = "Statisticial Analyst"
   location = "China,SH"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
@@ -96,14 +96,14 @@ canonifyurls = true
   identifier = "linkedin"
   name = "LinkedIn"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-linkedin\"></i>"
-  url = "https://www.linkedin.com/profile/"
+  url = "http://www.linkedin.com/in/boyao-shan-a1397b140/"
 
-[[menu.misc]]
-  weight = 1
-  identifier = "rss"
-  name = "RSS"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
-  url = "/index.xml"
+#[[menu.misc]]
+#  weight = 1
+#  identifier = "rss"
+#  name = "RSS"
+#  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
+#  url = "/index.xml"
 
 [params]
   # Customize date format use to render blog post date, categories and other
@@ -122,7 +122,7 @@ canonifyurls = true
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Hugo tranquilpeak theme demo"
+  description = "Boyao SHAN: to Learn :) to Recall :("
 
   # Customization
   # Define the behavior of the sidebar
@@ -137,7 +137,7 @@ canonifyurls = true
   #    large sidebar is swiped on all lower screens
   # 5: Display header bar on all screens and large sidebar is swiped on large screen
   # 6: Display header bar on all screens and medium sidebar is swiped
-  sidebarBehavior = 1
+  sidebarBehavior = 2
 
   # Your blog cover picture. I STRONGLY recommend you to use a CDN to speed up loading of pages.
   # There is many free CDN like Cloudinary or you can also use indirectly
