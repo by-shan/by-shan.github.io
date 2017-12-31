@@ -3,12 +3,12 @@ title: "Visualization: Animation (Simple Start)"
 date: 2017-12-31
 categories:
 - Notebook
-  tags:
+tags:
 - SAS
 - R
 - Visualization
-  thumbnailImagePosition: left
-  thumbnailImage: //https://s3-eu-west-1.amazonaws.com/static.gapminder.org/GapminderMedia/wp-uploads/20161019161829/screenshot2016.jpg
+thumbnailImagePosition: left
+thumbnailImage: //https://s3-eu-west-1.amazonaws.com/static.gapminder.org/GapminderMedia/wp-uploads/20161019161829/screenshot2016.jpg
 ---
 
 A brief introduction to animation visualization. Simple start with SAS 9.4, R/shiny, Plotly.
