@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.26 with theme Tranquilpeak 0.4.1-BETA">
-    <title>Notes_Vim</title>
+    <title>Visualization: Animation (Simple Start)</title>
     <meta name="author" content="Boyao SHAN">
     <meta name="keywords" content="">
 
@@ -30,17 +30,17 @@
     
 
     
-    <meta name="description" content="This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
+    <meta name="description" content="A brief introduction to animation visualization. Simple start with SAS 9.4, R/shiny, Plotly.
 ">
-    <meta property="og:description" content="This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
+    <meta property="og:description" content="A brief introduction to animation visualization. Simple start with SAS 9.4, R/shiny, Plotly.
 ">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Notes_Vim">
-    <meta property="og:url" content="/2017/09/notes_vim/">
+    <meta property="og:title" content="Visualization: Animation (Simple Start)">
+    <meta property="og:url" content="/2017/12/visualization-animation-simple-start/">
     <meta property="og:site_name" content="Boyao SHAN: to Learn :) to Recall :(">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Boyao SHAN: to Learn :) to Recall :(">
-    <meta name="twitter:description" content="This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
+    <meta name="twitter:description" content="A brief introduction to animation visualization. Simple start with SAS 9.4, R/shiny, Plotly.
 ">
     
     
@@ -53,7 +53,7 @@
     
 
     
-      <meta property="og:image" content="//img3.wikia.nocookie.net/__cb4/vim/images/8/89/Wiki-wordmark.png">
+      <meta property="og:image" content="//https://s3-eu-west-1.amazonaws.com/static.gapminder.org/GapminderMedia/wp-uploads/20161019161829/screenshot2016.jpg">
     
     
     
@@ -208,15 +208,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Notes_Vim
+      Visualization: Animation (Simple Start)
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-09-26T00:00:00Z">
+      <time itemprop="datePublished" datetime="2017-12-31T00:00:00Z">
         
-  September 26, 2017
+  December 31, 2017
 
       </time>
     
@@ -236,442 +236,88 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>This Vim Nootebook is kept for my self-learning about Vim. When learning to use linux, Vim is a must.
+              <p>A brief introduction to animation visualization. Simple start with SAS 9.4, R/shiny, Plotly.
 </p>
 
-<p>摘自《鸟哥Linux私房菜》</p>
+<h3 id="1-overview">1 Overview</h3>
 
-<h1 id="vim-程序编辑器"><strong>Vim</strong>程序编辑器</h1>
+<h4 id="famous-animation-examples">Famous Animation Examples</h4>
 
-<h2 id="为何要学-vim">为何要学 vim</h2>
-
-<ul>
-<li>所有的 Unix Like 系统都会内置 vi 文书编辑器，其他的文书编辑器则不一定会存在；</li>
-<li>很多个别软件的编辑接口都会主动调用 vi （例如未来会谈到的 crontab, visudo, edquota
-等指令）；</li>
-<li>vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的正确性，方便程序设计；</li>
-<li>因为程序简单，编辑速度相当快速。</li>
-</ul>
-
-<h2 id="vi的使用">Vi的使用</h2>
+<blockquote>
+<p>Visualization is a powerful and influential approach for presenting all types of data, big and small. While even static data visualizations, particularly unique ones, are more persuasive, memorable, and effective as decision aids than tables and text, animation can boost these advantages even further. When paired with a compelling topic and high-quality dataset, well-crafted animated visualizations can be extremely effective at explaining complex concepts and deeply engaging viewers— especially for data showing change across multiple groups or time periods.</p>
+</blockquote>
 
 <ul>
-<li><strong>一般指令模式</strong>
-以 vi 打开一个文件就直接进入一般指令模式了（这是默认的模式，也简称为一般模式）。在这个模式中， 你可以使用“上下左右”按键来移动光标，你可以使用“删除字符”或“删除整列”来处理文件内容， 也可以使用“复制、贴上”来处理你的文件数据。</li>
-<li><strong>编辑模式</strong>
-在一般指令模式中可以进行删除、复制、贴上等等的动作，但是却无法编辑文件内容的！要等到你按下“i, I, o, O, a, A, r, R”等任何一个字母之后才会进入编辑模式。注意了！通常在  Linux 中，按下这些按键时，在画面的左下方会出现“ INSERT 或 REPLACE ”的字样，此时才可以进行编辑。而如果要回到一般指令模式时，则必须要按下“Esc”这个按键即可退出编辑模式。</li>
-<li><strong>命令行命令模式</strong>
-在一般模式当中，输入“ : / ? ”三个中的任何一个按钮，就可以将光标移动到最下面那一列。在这个模式当中， 可以提供你“搜寻数据”的动作，而读取、存盘、大量取代字符、离开 vi 、显示行号等等的动作则是在此模式中达成的！</li>
+<li><a href="https://medium.com/@EvanSinar/use-animation-to-supercharge-data-visualization-cd905a882ad4"><strong>Use Animation to Supercharge Data Visuaalization</strong></a></li>
 </ul>
 
-<h2 id="简易操作">简易操作</h2>
+<h4 id="how-to-tell-story">How to tell story</h4>
 
+<blockquote>
 <ol>
-<li>使用 “vi filename” 进入一般指令模式
-<code>vim
-/bin/vi welcome.txt   ##create file welcom.txt
-</code></li>
-<li>按下 i 进入编辑模式，开始编辑文字</li>
-<li>按下【ESC】按钮回到一般指令模式</li>
-<li>进入命令行界面，文件存储并离开 vi 环境
-<code>vim
-:wq
-</code></li>
+<li>Know when to use animation as a medium</li>
+<li>Structure the story</li>
+<li>Try starting static and animate layers to build the explanation</li>
+<li>Use storyboarding to understand context and develop focus</li>
+<li>Give the Project Constraints</li>
 </ol>
+</blockquote>
 
-<h2 id="按键说明">按键说明</h2>
-
-<h3 id="一般指令模式可用的按钮说明-光标移动-复制黏贴-搜索取代">一般指令模式可用的按钮说明：光标移动、复制黏贴、搜索取代</h3>
-
-<h4 id="移动光标的方法">移动光标的方法</h4>
-
-<table>
-<thead>
-<tr>
-<th>按键</th>
-<th>功能</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>h 或 向左方向键（←）</td>
-<td>光标向左移动一个字符</td>
-</tr>
-
-<tr>
-<td>j 或 向下方向键（↓）</td>
-<td>光标向下移动一个字符</td>
-</tr>
-
-<tr>
-<td>k 或 向上方向键（↑）</td>
-<td>光标向上移动一个字符</td>
-</tr>
-
-<tr>
-<td>l 或 向右方向键（→）</td>
-<td>光标向右移动一个字符</td>
-</tr>
-
-<tr>
-<td>[Ctrl] + [f]</td>
-<td>屏幕“向下”移动一页，相当于 [Page Down]按键 （常用）</td>
-</tr>
-
-<tr>
-<td>[Ctrl] + [b]</td>
-<td>屏幕“向上”移动一页，相当于 [Page Up] 按键（常用）</td>
-</tr>
-
-<tr>
-<td>[Ctrl] + [d]</td>
-<td>屏幕“向下”移动半页</td>
-</tr>
-
-<tr>
-<td>[Ctrl] + [u]</td>
-<td>屏幕“向上”移动半页</td>
-</tr>
-
-<tr>
-<td>+</td>
-<td>光标移动到非空白字符的下一列</td>
-</tr>
-
-<tr>
-<td>-</td>
-<td>光标移动到非空白字符的上一列</td>
-</tr>
-
-<tr>
-<td>n<space></td>
-<td>n<space>那个 n 表示“数字”，例如 20 。按下数字后再按空白键，光标会向右移动这一列的 n 个字符。例如 20<space> 则光标会向后面移动 20个字符距离。</td>
-</tr>
-
-<tr>
-<td>0 或功能键[Home]</td>
-<td>这是数字“ 0 ”：移动到这一列的最前面字符处（常用）</td>
-</tr>
-
-<tr>
-<td>$ 或功能键[End]</td>
-<td>移动到这一列的最后面字符处（常用）</td>
-</tr>
-
-<tr>
-<td>H</td>
-<td>光标移动到这个屏幕的最上方那一列的第一个字符</td>
-</tr>
-
-<tr>
-<td>M</td>
-<td>光标移动到这个屏幕的中央那一列的第一个字符</td>
-</tr>
-
-<tr>
-<td>L</td>
-<td>光标移动到这个屏幕的最下方那一列的第一个字符</td>
-</tr>
-
-<tr>
-<td>G</td>
-<td>移动到这个文件的最后一列（常用）</td>
-</tr>
-
-<tr>
-<td>nG</td>
-<td>n 为数字。移动到这个文件的第 n 列。例如20G 则会移动到这个文件的第 20 列（可配合:set nu）</td>
-</tr>
-
-<tr>
-<td>gg</td>
-<td>移动到这个文件的第一列，相当于 1G 啊!（常用）</td>
-</tr>
-
-<tr>
-<td>n<Enter></td>
-<td>n 为数字。光标向下移动 n 列（常用）</td>
-</tr>
-</tbody>
-</table>
-
-<h4 id="搜寻与取代">搜寻与取代</h4>
-
-<table>
-<thead>
-<tr>
-<th>按键</th>
-<th>功能</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>/word</td>
-<td>向光标之下寻找一个名称为 word 的字串。例如要在文件内搜寻 vbird 这个字串，就输入/vbird 即可！ （常用）</td>
-</tr>
-
-<tr>
-<td>?word</td>
-<td>向光标之上寻找一个字串名称为 word 的字串。</td>
-</tr>
-
-<tr>
-<td>n</td>
-<td>这个 n 是英文按键。代表“<u>重复前一个搜寻的动作</u>”。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字串，则按下n 后，会向下继续搜寻下一个名称为 vbird 的字串。如果是执行 ?vbird 的话，那么按下 n则会向上继续搜寻名称为 vbird 的字串！</td>
-</tr>
-
-<tr>
-<td>N</td>
-<td>这个 N 是英文按键。与 n 刚好相反，为“反向”进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示“向上”搜寻 vbird 。</td>
-</tr>
-
-<tr>
-<td>:n1,n2s/word1/word2/g</td>
-<td>n1 与 n2 为数字。在第 n1 与 n2 列之间寻找word1 这个字串，并将该字串取代为 word2！举例来说，在 100 到 200 列之间搜寻 vbird并取代为 VBIRD则：“:100,200s/vbird/VBIRD/g”。（常用）</td>
-</tr>
-
-<tr>
-<td>:1,$s/word1/word2/g</td>
-<td>从第一列到最后一列寻找 word1 字串，并将该字串取代为 word2 ！（常用）</td>
-</tr>
-
-<tr>
-<td>:1,$s/word1/word2/gc</td>
-<td>从第一列到最后一列寻找 word1 字串，并将该字串取代为 word2 ！且在取代前显示提示字符给使用者确认 （confirm） 是否需要取代！（常用）</td>
-</tr>
-</tbody>
-</table>
-
-<h4 id="删除-复制与黏贴">删除、复制与黏贴</h4>
-
-<table>
-<thead>
-<tr>
-<th>按键</th>
-<th>功能</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>x, X</td>
-<td>在一列字当中，x 为向后删除一个字符 （相当于 [del] 按键）， X 为向前删除一个字符（相当于 [backspace] 亦即是倒退键） （常用）</td>
-</tr>
-
-<tr>
-<td>nx</td>
-<td>n 为数字，连续向后删除 n 个字符。举例来说，我要连续删除 10 个字符， “10x”。</td>
-</tr>
-
-<tr>
-<td>dd</td>
-<td>删除光标所在的那一整列（常用）</td>
-</tr>
-
-<tr>
-<td>ndd</td>
-<td>n 为数字。删除光标所在的向下 n 列，例如20dd 则是删除 20 列 （常用）</td>
-</tr>
-
-<tr>
-<td>d1G</td>
-<td>删除光标所在到第一列的所有数据</td>
-</tr>
-
-<tr>
-<td>dG</td>
-<td>删除光标所在到最后一列的所有数据</td>
-</tr>
-
-<tr>
-<td>d$</td>
-<td>删除光标所在处，到该列的最后一个字符</td>
-</tr>
-
-<tr>
-<td>d0</td>
-<td>那个是数字的 0 ，删除光标所在处，到该列的最前面一个字符</td>
-</tr>
-
-<tr>
-<td>yy</td>
-<td>复制光标所在的那一列（常用）</td>
-</tr>
-
-<tr>
-<td>nyy</td>
-<td>n 为数字。复制光标所在的向下 n 列，例如20yy 则是复制 20 列（常用）</td>
-</tr>
-
-<tr>
-<td>y1G</td>
-<td>复制光标所在列到第一列的所有数据</td>
-</tr>
-
-<tr>
-<td>yG</td>
-<td>复制光标所在列到最后一列的所有数据</td>
-</tr>
-
-<tr>
-<td>y0</td>
-<td>复制光标所在的那个字符到该列行首的所有数据</td>
-</tr>
-
-<tr>
-<td>y$</td>
-<td>复制光标所在的那个字符到该列行尾的所有数据</td>
-</tr>
-
-<tr>
-<td>p, P</td>
-<td>p 为将已复制的数据在光标下一列贴上，P 则为贴在光标上一列！ 举例来说，我目前光标在第 20 列，且已经复制了 10 列数据。则按下 p 后， 那 10 列数据会贴在原本的 20 列之后，亦即由 21 列开始贴。但如果是按下 P呢？ 那么原本的第 20 列会被推到变成 30列。 （常用）</td>
-</tr>
-
-<tr>
-<td>J</td>
-<td>将光标所在列与下一列的数据结合成同一列</td>
-</tr>
-
-<tr>
-<td>c</td>
-<td>重复删除多个数据，例如向下删除 10 列，[10cj ]</td>
-</tr>
-
-<tr>
-<td>u</td>
-<td>复原前一个动作。（常用）</td>
-</tr>
-
-<tr>
-<td>[Ctrl]+r</td>
-<td>重做上一个动作。（常用）</td>
-</tr>
-
-<tr>
-<td>.</td>
-<td>不要怀疑！这就是小数点！意思是重复前一个动作的意思。 如果你想要重复删除、重复贴上等等动作，按下小数点“.”就好了！ （常用）</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="一般指令模式切换到编辑模式可用的按钮说明">一般指令模式切换到编辑模式可用的按钮说明</h3>
-
-<table>
-<thead>
-<tr>
-<th>按键</th>
-<th>功能</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>i, I</td>
-<td>进入插入模式（Insert mode）：i为“从目前光标所在处插入”， I为“在目前所在列的第一个非空白字符处开始插入”。 （常用）</td>
-</tr>
-
-<tr>
-<td>a, A</td>
-<td>进入插入模式（Insert mode）：a为“从目前光标所在的下一个字符处开始插入”， A 为“从光标所在列的最后一个字符处开始插入”。（常用）</td>
-</tr>
-
-<tr>
-<td>o, O</td>
-<td>进入插入模式（Insert mode）：这是英文字母 o 的大小写。o为“在目前光标所在的下一列处插入新的一列”； O 为在目前光标所在处的上一列插入新的一列！（常用）</td>
-</tr>
-
-<tr>
-<td>r, R</td>
-<td>进入取代模式（Replacemode）：r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；（常用）</td>
-</tr>
-
-<tr>
-<td>[Esc]</td>
-<td>退出编辑模式，回到一般指令模式中（常用）</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="一般指令模式切换到命令行界面的可用按钮说明">一般指令模式切换到命令行界面的可用按钮说明</h3>
-
-<table>
-<thead>
-<tr>
-<th>按键</th>
-<th>功能</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>:w</td>
-<td>将编辑的数据写入硬盘文件中（常用）</td>
-</tr>
-
-<tr>
-<td>:w!</td>
-<td>若文件属性为“只读”时，强制写入该文件。不过，到底能不能写入， 还是跟你对该文件的文件权限有关啊！</td>
-</tr>
-
-<tr>
-<td>:q</td>
-<td>离开 vi （常用）</td>
-</tr>
-
-<tr>
-<td>:q!</td>
-<td>若曾修改过文件，又不想储存，使用 ! 为强制离开不储存盘案。</td>
-</tr>
-
-<tr>
-<td>:wq</td>
-<td>储存后离开，若为 :wq! 则为强制储存后离开 （常用）</td>
-</tr>
-
-<tr>
-<td>ZZ</td>
-<td>这是大写的 Z 喔！若文件没有更动，则不储存离开，若文件已经被更动过，则储存后离开！</td>
-</tr>
-
-<tr>
-<td>:w [filename]</td>
-<td>将编辑的数据储存成另一个文件（类似另存新文件）</td>
-</tr>
-
-<tr>
-<td>:r [filename]</td>
-<td>在编辑的数据中，读入另一个文件的数据。亦即将“filename” 这个文件内容加到光标所在列后面</td>
-</tr>
-
-<tr>
-<td>:n1,n2 w [filename]</td>
-<td>将 n1 到 n2 的内容储存成 filename 这个文件。</td>
-</tr>
-
-<tr>
-<td>:! command</td>
-<td>暂时离开 vi 到命令行界面下执行 command 的显示结果！例如 “:! ls /home”即可在 vi 当中察看 /home 下面以ls 输出的文件信息！</td>
-</tr>
-
-<tr>
-<td>vim 环境的变更</td>
-<td>vim 环境的变更</td>
-</tr>
-
-<tr>
-<td>:set nu</td>
-<td>显示行号，设置之后，会在每一列的字首显示该列的行号</td>
-</tr>
-
-<tr>
-<td>:set nonu</td>
-<td>与 set nu 相反，为取消行号！</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li><a href="https://visual.ly/blog/how-to-turn-a-static-visualization-into-a-successful-animation/">How to Turn a Static Visualization Into a Successful Animation</a></li>
+</ul>
+
+<h3 id="2-how-to-build">2 How to build</h3>
+
+<h4 id="sas-9-4">SAS 9.4</h4>
+
+<ul>
+<li><p>SAS help documentation</p></li>
+
+<li><p><a href="http://documentation.sas.com/?docsetId=lrcon&amp;docsetTarget=p04zpqk21h6sczn1gpdcy30s6xjf.htm&amp;docsetVersion=9.4&amp;locale=ja">Creating Animated GIF Images and SVG Documents</a></p></li>
+
+<li><p><a href="http://documentation.sas.com/?docsetId=graphref&amp;docsetTarget=p0so6ik5s8nu4fn12nzdh96nzw2a.htm&amp;docsetVersion=9.4&amp;locale=en">Examples: Generating Animated Images</a></p></li>
+</ul>
+
+<h4 id="r-shiny">R/Shiny</h4>
+
+<ul>
+<li>Using <strong>sliders</strong> <a href="https://shiny.rstudio.com/articles/sliders.html">link</a></li>
+</ul>
+
+<blockquote>
+<p>webplot [demo unavailable yet]</p>
+</blockquote>
+
+<h4 id="plotly">Plotly</h4>
+
+<blockquote>
+<p>plotly R <a href="https://plot.ly/r/#animations">link</a></p>
+
+<p>plotly Python <a href="https://plot.ly/python/#animations">link</a></p>
+</blockquote>
+
+<h3 id="ways-to-make-your-own-animated-gifs">Ways to Make Your Own Animated GIFs</h3>
+
+<ul>
+<li><strong>The Photoshop Route</strong> <a href="https://github.com/lenagroeger/gifs">tutorial</a></li>
+<li><strong>FFMPEG</strong> <a href="http://ffmpeg.org/">official site</a>
+
+<ul>
+<li>images-&gt;video (<a href="https://stackoverflow.com/questions/24961127/ffmpeg-create-video-from-images">https://stackoverflow.com/questions/24961127/ffmpeg-create-video-from-images</a>)</li>
+<li>video-&gt;images (<a href="https://stackoverflow.com/questions/7468274/ffmpeg-images-to-video-script-anyone">https://stackoverflow.com/questions/7468274/ffmpeg-images-to-video-script-anyone</a>)</li>
+</ul></li>
+</ul>
+
+<h3 id="my-experience">My Experience</h3>
+
+<ul>
+<li>how to tell the story is the most important</li>
+<li>if you just want a very simple animation gif, looping with a timeline or other axis, you can build a series of static graphics and turn them into gif using PS</li>
+<li>Excel + PS seems also quite good</li>
+<li>R has powerful ggplot2, plotly for graphics, but neither could output .gif directly. Once you use Shiny, you need to consider the available server</li>
+<li>**FFMPEG is 1 powerful free tool to deal with photoes -&gt; video, video -&gt; photoes or video -&gt; video. **</li>
+</ul>
               
             </div>
           </div>
@@ -683,7 +329,11 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://by-shan.github.io//tags/vim/">Vim</a>
+  <a class="tag tag--primary tag--small" href="https://by-shan.github.io//tags/sas/">SAS</a>
+
+  <a class="tag tag--primary tag--small" href="https://by-shan.github.io//tags/r/">R</a>
+
+  <a class="tag tag--primary tag--small" href="https://by-shan.github.io//tags/visualization/">Visualization</a>
 
                   </div>
                 
@@ -695,7 +345,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/notes_git/" data-tooltip="Notes_Git">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -703,7 +353,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/robert-allisons-wonderful-sas-graphics-with-gtl/" data-tooltip="Robert Allison&#39;s Wonderful SAS Graphics with GTL">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/notes_git/" data-tooltip="Notes_Git">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -720,19 +370,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://by-shan.github.io/2017/09/notes_vim/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://by-shan.github.io/2017/12/visualization-animation-simple-start/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://by-shan.github.io/2017/09/notes_vim/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://by-shan.github.io/2017/12/visualization-animation-simple-start/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://by-shan.github.io/2017/09/notes_vim/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://by-shan.github.io/2017/12/visualization-animation-simple-start/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -779,7 +429,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/notes_git/" data-tooltip="Notes_Git">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -787,7 +437,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/robert-allisons-wonderful-sas-graphics-with-gtl/" data-tooltip="Robert Allison&#39;s Wonderful SAS Graphics with GTL">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://by-shan.github.io/2017/09/notes_git/" data-tooltip="Notes_Git">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -804,19 +454,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://by-shan.github.io/2017/09/notes_vim/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://by-shan.github.io/2017/12/visualization-animation-simple-start/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://by-shan.github.io/2017/09/notes_vim/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://by-shan.github.io/2017/12/visualization-animation-simple-start/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://by-shan.github.io/2017/09/notes_vim/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://by-shan.github.io/2017/12/visualization-animation-simple-start/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -846,19 +496,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fby-shan.github.io%2F2017%2F09%2Fnotes_vim%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fby-shan.github.io%2F2017%2F12%2Fvisualization-animation-simple-start%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fby-shan.github.io%2F2017%2F09%2Fnotes_vim%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fby-shan.github.io%2F2017%2F12%2Fvisualization-animation-simple-start%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fby-shan.github.io%2F2017%2F09%2Fnotes_vim%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fby-shan.github.io%2F2017%2F12%2Fvisualization-animation-simple-start%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -1068,9 +718,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/by-shan.github.io\/2017\/09\/notes_vim\/';
+          this.page.url = 'https:\/\/by-shan.github.io\/2017\/12\/visualization-animation-simple-start\/';
           
-            this.page.identifier = '\/2017\/09\/notes_vim\/'
+            this.page.identifier = '\/2017\/12\/visualization-animation-simple-start\/'
           
         };
         (function() {
